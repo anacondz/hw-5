@@ -148,11 +148,12 @@ margin-right: 50px;
 .studio1 {
     position: relative;
 }
-.header-studio .link {
+.link {
     display: block;
         padding-top: 32px;
         padding-bottom: 32px;
         font-weight: 500;
+      color: inherit;
         font-size: 14px;
         line-height: 1.14;
         letter-spacing: 0.02em;
@@ -196,6 +197,10 @@ line-height: 16px;
 letter-spacing: 0.02em;
 text-decoration: none;
 }
+.header-portfolio.current {
+color: #2196F3;
+position: relative;
+}
 .header-portfolio.current::after {
 position: absolute;
     bottom: 0;
@@ -208,9 +213,12 @@ position: absolute;
     background-color: #2196F3;
 }
 .header-portfolio:focus,
-.header-portfolio:hover {
+.header-portfolio:hover 
+{
     color: #2196F3;
-   
+}
+.header-portfolio:visited {
+
 }
 .contacts {
 
@@ -249,7 +257,7 @@ transition-property: color;
 }
 .nav1:hover .icon-tl,
 .nav1:focus .icon-tl {
-    fill: #2196F3;
+   
 }
 
 
@@ -288,7 +296,7 @@ color: #212121;
     text-align: center;
     letter-spacing: 0.03em;
     border: 0;
- 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button.secondary {
     padding: 6px 22px;
@@ -302,6 +310,7 @@ color: #212121;
     letter-spacing: 0.03em;
     border: 0;
     color: #212121;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
@@ -349,8 +358,8 @@ font-weight: 400;
     line-height: 1.56;
     letter-spacing: 0.03em;
 }
-.cnt .item:hover .overlay-card,
-.cnt .item:focus .overlay-card {
+.cnt .pg:hover .overlay-card,
+.cnt .pg:focus .overlay-card {
     transform: translateY(0); }
 
 .cnt {
@@ -826,7 +835,8 @@ border-radius: 0px 0px 4px 4px;
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.2);
-        transition: 250ms;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+         visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   
 
